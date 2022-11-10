@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">  
+        function countpara()
+        {  
+            var totalpara=document.getElementsByTagName("p");  
+            alert("total p tags are: "+totalpara.length);  
+          
+        } 
+        
+        function counth2()
+        {  
+            var totalh2=document.getElementsByTagName("h2");  
+            alert("total h2 tags are: "+totalh2.length);  
+        }  
+        function counth3()
+        {  
+            var totalh3=document.getElementsByTagName("h3");  
+            alert("total h3 tags are: "+totalh3.length);  
+        }  
+    </script>  
+        <p>This is a pragraph</p>  
+        <p>Here we are going to count total number of paragraphs by getElementByTagName() method.</p>  
+        <p>Let's see the simple example</p>  
+        <h2>This is h2 tag</h2>  
+        <h2>This is h2 tag</h2>  
+        <h3>This is h3 tag</h3>  
+        <h3>This is h3 tag</h3>  
+        <h3>This is h3 tag</h3>  
+        <button onclick="counth2()">count h2</button>  
+        <button onclick="counth3()">count h3</button>
+        <button onclick="countpara()">count paragraph</button> 
+</body>
+</html>

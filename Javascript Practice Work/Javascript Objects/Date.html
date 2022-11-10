@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Current Date and Time: <span id="txt"></span> <br><br>
+    Current Time: <span id="txt1"></span>
+    
+    <script>
+        var today=new Date();  
+        document.getElementById('txt').innerHTML=today;
+
+        var today1=new Date();  
+        var h=today1.getHours();  
+        var m=today1.getMinutes();  
+        var s=today1.getSeconds();  
+        document.getElementById('txt1').innerHTML=h+":"+m+":"+s;  
+    
+            window.onload=function()
+            {
+                getTime();
+            }
+            function getTime()
+            {  
+                var today2=new Date();  
+                var h=today2.getHours();  
+                var m=today2.getMinutes();  
+                var s=today2.getSeconds();  
+                // add a zero in front of numbers<10  
+                m=checkTime(m);  
+                s=checkTime(s);  
+                document.getElementById('txt').innerHTML=h+":"+m+":"+s;  
+                setTimeout(function(){getTime()},1000);  
+            } 
+
+            //setInterval("getTime()",1000);//another way  
+            function checkTime(i)
+            {  
+                if (i<10)
+                {  
+                    i="0" + i;  
+                }  
+                return i;  
+            }  
+    </script>
+</body>
+</html>
